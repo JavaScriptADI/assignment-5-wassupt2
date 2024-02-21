@@ -1,3 +1,4 @@
-/**
- * დაწერეთ ფუნქცია, რომელიც "string" -ების "array" -ში დათვლის საშუალოდ რა ზომის "string" -ებია
- */
+const averageStr = array => array.join('').length / array.length 
+
+const someArray = ["String", "string", "String", ];
+console.log(averageStr(someArray)); 

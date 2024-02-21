@@ -1,14 +1,13 @@
-/**
- * დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიღებს "array" -ს.
- * ამ ფუნქციამ უნდა იპოვოს გადაცემულ "array" -ში რამდენი ისეთი "string" -ია, რომელიც შეიცავს
- * დიდ ასოს.
- * 
- * მაგალითი:
- * const someArray = ["String", "string", "StRing"];
- * 
- * შედეგი:
- * 2 (რადგან, ორი ისეთი "string" -ია, რომელიც დიდ ასოს შეიცავს)
- * 
- * კითხვა:
- * აქვს თუ არა თქვენ მიერ დაწერილი ფუნქციას side effect -ი?
- */
+const someArray = ["String", "string", "String"];
+
+function upperCaseWords(array) {
+  let count = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].toLowerCase() !== array[i]) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(upperCaseWords(someArray)); 
