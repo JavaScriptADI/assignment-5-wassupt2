@@ -1,6 +1,12 @@
-/**
- * მოცემულია "string" -ების "array" -ი.
- * დაწერეთ კოდი, რომელიც ამ "array" -ში იპოვის ყველაზე მოკლე სიგრძის მქონე
- * "string" -ს და შემდგომ გამოიტანეთ ამ ელემენტის ზომა, მნიშვნელობა და რომელ ინდექსზეა ის
- * "console.log"-ის გამოყენებით
- */
+const words = ["car", "sauce", "vitamine" , "apartment"]
+
+let shortestWord = 0;
+
+for (let i = 1; i < words.length; i++) {
+    if (words[i].length < words[shortestWord].length) {
+      shortestWord= i;
+    }
+  }
+
+  console.log(words[shortestWord]);
+  console.log(words[shortestWord].length);
